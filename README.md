@@ -27,17 +27,36 @@ Perfect for no-code builders creating enterprise applications!
 
 ## 🚀 Quick Start
 
+### Option 1: Global Installation (Recommended)
+Install commands for use in ALL your projects:
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/tom2tomtomtom/claude-productivity-suite.git
 
-# 2. Run the installer
+# 2. Run the global installer
 cd claude-productivity-suite
 ./install.sh
 
-# 3. Start using commands
+# 3. Use commands in any project
+cd /path/to/any/project
 claude
 /help  # See all available commands
+```
+
+### Option 2: Project-Specific Installation
+Install commands for a single project only:
+
+```bash
+# 1. Navigate to your project
+cd /path/to/your/project
+
+# 2. Run the project installer
+~/claude-productivity-suite/install-project.sh
+
+# 3. Commands are available in this project only
+claude
+/help
 ```
 
 ## 📸 Screenshots

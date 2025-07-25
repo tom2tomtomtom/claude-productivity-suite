@@ -5,9 +5,10 @@
 
 set -e  # Exit on error
 
-echo "🚀 Claude Productivity Suite Installer"
-echo "====================================="
+echo "🚀 Claude Productivity Suite - Global Installer"
+echo "============================================="
 echo ""
+echo "This will install commands globally for ALL your projects."
 
 # Check prerequisites
 check_prerequisites() {
@@ -38,8 +39,8 @@ setup_directories() {
     mkdir -p ~/.claude-suite/reports
     mkdir -p ~/.claude-suite/templates
     
-    # Project directories
-    mkdir -p .claude/commands/{agent-os,codebase-os,testing,workflows}
+    # Global Claude directories (available everywhere)
+    mkdir -p ~/.claude/commands/{agent-os,codebase-os,testing,workflows}
     
     echo "✅ Directories created!"
     echo ""
@@ -50,10 +51,13 @@ install_agent_os() {
     echo "🤖 Installing Agent-OS..."
     cp -r agent-os/* ~/.claude-suite/agent-os/
     
-    # Link commands to project
+    # Copy commands to global Claude directory
     for cmd in agent-os/instructions/*.md; do
-        filename=$(basename "$cmd")
-        ln -sf "$HOME/.claude-suite/agent-os/instructions/$filename" ".claude/commands/agent-os/$filename"
+        if [ -f "$cmd" ]; then
+            filename=$(basename "$cmd")
+            cp "$cmd" "$HOME/.claude/commands/agent-os/$filename"
+            echo "   Installed: /agent-os/$filename"
+        fi
     done
     
     echo "✅ Agent-OS installed!"
@@ -63,10 +67,13 @@ install_codebase_os() {
     echo "🧹 Installing Codebase-OS..."
     cp -r codebase-os/* ~/.claude-suite/codebase-os/
     
-    # Link commands
+    # Copy commands to global Claude directory
     for cmd in codebase-os/commands/*.md; do
-        filename=$(basename "$cmd")
-        ln -sf "$HOME/.claude-suite/codebase-os/commands/$filename" ".claude/commands/codebase-os/$filename"
+        if [ -f "$cmd" ]; then
+            filename=$(basename "$cmd")
+            cp "$cmd" "$HOME/.claude/commands/codebase-os/$filename"
+            echo "   Installed: /codebase-os/$filename"
+        fi
     done
     
     echo "✅ Codebase-OS installed!"
@@ -77,10 +84,13 @@ install_testing_suite() {
     echo "🧪 Installing Testing Suite..."
     cp -r testing-suite/* ~/.claude-suite/testing/
     
-    # Link commands
+    # Copy commands to global Claude directory
     for cmd in testing-suite/commands/*.md; do
-        filename=$(basename "$cmd")
-        ln -sf "$HOME/.claude-suite/testing/commands/$filename" ".claude/commands/testing/$filename"
+        if [ -f "$cmd" ]; then
+            filename=$(basename "$cmd")
+            cp "$cmd" "$HOME/.claude/commands/testing/$filename"
+            echo "   Installed: /testing/$filename"
+        fi
     done
     
     # Install Playwright if not present
@@ -97,8 +107,11 @@ install_workflows() {
     echo "🔄 Installing workflows..."
     
     for workflow in workflows/*.md; do
-        filename=$(basename "$workflow")
-        cp "$workflow" ".claude/commands/workflows/$filename"
+        if [ -f "$workflow" ]; then
+            filename=$(basename "$workflow")
+            cp "$workflow" "$HOME/.claude/commands/workflows/$filename"
+            echo "   Installed: /workflows/$filename"
+        fi
     done
     
     echo "✅ Workflows installed!"
