@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/tom2tomtomtom/claude-productivity-suite/issues"
   },
-  "homepage": "https://github.com/tom2tomtomtom/claude-productivity-suite#readme"
+  "homepage": "https://github.com/tom2tomtomtom/claude-productivity-suite#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1"
+  }
 }
