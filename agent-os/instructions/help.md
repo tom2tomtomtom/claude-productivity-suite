@@ -16,18 +16,18 @@ description: Show all available commands and workflows
 
 ## 🧹 Codebase-OS Commands (Code Quality)
 - `/analyze-codebase` - Comprehensive code health check
-- `/clean-codebase` - Automated code cleanup
+- `/clean-codebase` - Automated code cleanup *(v2 enhanced)*
 - `/refactor-smart` - Intelligent refactoring
 - `/monitor-quality` - Monitor code quality trends
 
 ## 🧪 Testing Commands
 - `/fix-and-test` - Complete error fixing and testing
-- `/pre-deploy-check` - 5-minute deployment safety check
+- `/pre-deploy-check` - 5-minute deployment safety check *(v2 enhanced)*
 - `/test-core-flows` - Test essential user journeys
 - `/railway-deploy` - Railway-specific deployment
 
 ## 🔄 Workflows
-- `/daily-dev` - Daily development workflow
+- `/daily-dev` - Daily development workflow *(v2 enhanced)*
 - `/pre-deploy` - Pre-deployment checklist
 - `/prod-release` - Production release workflow
 - `/emergency-fix` - Emergency deployment process
