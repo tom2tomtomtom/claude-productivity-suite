@@ -44,6 +44,8 @@ claude
 /help  # See all available commands
 ```
 
+**Note:** If you see duplicate commands, run `./cleanup-duplicates.sh` to fix it.
+
 ### Option 2: Project-Specific Installation
 Install commands for a single project only:
 

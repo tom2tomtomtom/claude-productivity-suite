@@ -49,9 +49,13 @@ setup_directories() {
 # Install Agent-OS
 install_agent_os() {
     echo "🤖 Installing Agent-OS..."
-    cp -r agent-os/* ~/.claude-suite/agent-os/
     
-    # Copy commands to global Claude directory
+    # Copy standards and templates to suite directory
+    mkdir -p ~/.claude-suite/agent-os
+    cp -r agent-os/* ~/.claude-suite/agent-os/ 2>/dev/null || true
+    
+    # Copy commands to global Claude directory (in subdirectory)
+    mkdir -p ~/.claude/commands/agent-os
     for cmd in agent-os/instructions/*.md; do
         if [ -f "$cmd" ]; then
             filename=$(basename "$cmd")
