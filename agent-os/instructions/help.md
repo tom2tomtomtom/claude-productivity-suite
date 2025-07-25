@@ -13,6 +13,7 @@ description: Show all available commands and workflows
 - `/create-spec` - Create detailed specifications
 - `/execute-tasks` - Execute development tasks
 - `/analyze-product` - Analyze existing codebase
+- `/create-vision` - Create clear vision documents *(new)*
 
 ## 🧹 Codebase-OS Commands (Code Quality)
 - `/analyze-codebase` - Comprehensive code health check
