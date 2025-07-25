@@ -85,9 +85,10 @@ claude
 ## 📚 Documentation
 
 - [Getting Started Guide](docs/getting-started.md)
+- [Keeping Your Code on Track](docs/keeping-code-on-track.md) 🆕
 - [Command Reference](docs/command-reference.md)
-- [Video Tutorials](docs/video-tutorials.md)
 - [Best Practices](docs/best-practices.md)
+- [Video Tutorials](docs/video-tutorials.md)
 
 ## 🤝 Contributing
 
