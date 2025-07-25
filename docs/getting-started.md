@@ -14,7 +14,7 @@ Before you begin, ensure you have:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/claude-productivity-suite.git
+   git clone https://github.com/tom2tomtomtom/claude-productivity-suite.git
    cd claude-productivity-suite
    ```
 

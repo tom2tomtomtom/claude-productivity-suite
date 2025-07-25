@@ -29,7 +29,7 @@ Perfect for no-code builders creating enterprise applications!
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/claude-productivity-suite.git
+git clone https://github.com/tom2tomtomtom/claude-productivity-suite.git
 
 # 2. Run the installer
 cd claude-productivity-suite

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# GitHub Setup Instructions for Claude Productivity Suite
+
+echo "🚀 GitHub Repository Setup Instructions"
+echo "======================================"
+echo ""
+echo "Since GitHub CLI is not installed, please follow these manual steps:"
+echo ""
+echo "1. Go to https://github.com/new"
+echo ""
+echo "2. Create a new repository with these settings:"
+echo "   - Repository name: claude-productivity-suite"
+echo "   - Description: AI-powered development commands for Claude Code"
+echo "   - Public repository (recommended)"
+echo "   - DO NOT initialize with README (we already have one)"
+echo "   - DO NOT add .gitignore (we already have one)"
+echo "   - License: MIT (already included)"
+echo ""
+echo "3. After creating, copy the repository URL"
+echo "   It will look like: https://github.com/YOUR_USERNAME/claude-productivity-suite.git"
+echo ""
+echo "4. Run these commands (replace YOUR_USERNAME):"
+echo ""
+echo "   git remote add origin https://github.com/YOUR_USERNAME/claude-productivity-suite.git"
+echo "   git branch -M main"
+echo "   git push -u origin main"
+echo ""
+echo "5. Optional: Set up GitHub Pages for documentation"
+echo "   - Go to Settings > Pages"
+echo "   - Source: Deploy from branch"
+echo "   - Branch: main, folder: /docs"
+echo ""
+echo "Current repository status:"
+git status
+echo ""
+echo "Current commits:"
+git log --oneline

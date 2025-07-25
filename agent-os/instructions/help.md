@@ -36,6 +36,6 @@ description: Show all available commands and workflows
 4. Type any command to see its detailed instructions
 
 ## 🆘 Need Help?
-- Documentation: https://github.com/yourusername/claude-productivity-suite
+- Documentation: https://github.com/tom2tomtomtom/claude-productivity-suite
 - Report issues: /bug
 - Discord: [Join our community]
