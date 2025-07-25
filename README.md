@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code Compatible](https://img.shields.io/badge/Claude%20Code-Compatible-blue)](https://anthropic.com/claude-code)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Version](https://img.shields.io/badge/Version-2.0-green)](https://github.com/tom2tomtomtom/claude-productivity-suite/releases)
 
 ## 🎯 What is this?
 
@@ -15,6 +16,16 @@ A comprehensive collection of Claude Code commands and workflows that acts as yo
 - **Railway Integration**: Seamless deployment to production
 
 Perfect for no-code builders creating enterprise applications!
+
+## 🆕 Version 2.0 - Enhanced with Agent-OS Patterns
+
+Inspired by Brian Casel's Agent-OS, v2.0 brings powerful enhancements:
+- **Three-Layer Context System**: Standards → Project → Specs
+- **XML-Structured Workflows**: Clear, parseable instructions
+- **Workflow Composition**: Chain commands intelligently
+- **Enhanced Error Handling**: Graceful failure recovery
+- **Validation Checklists**: Quality gates at each step
+- **Cross-Reference System**: @ prefix for easy navigation
 
 ## ✨ Features
 

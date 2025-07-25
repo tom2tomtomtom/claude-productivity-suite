@@ -1,0 +1,35 @@
+{
+  "complexity": {
+    "maxCyclomaticComplexity": 10,
+    "maxFunctionLength": 50,
+    "maxFileLength": 300,
+    "maxNestingDepth": 4
+  },
+  "testing": {
+    "minCoverage": 80,
+    "requireTestsForNewCode": true,
+    "testFilePattern": "*.spec.ts"
+  },
+  "dependencies": {
+    "maxBundleSize": "5MB",
+    "allowedLicenses": ["MIT", "Apache-2.0", "BSD"],
+    "maxDependencyAge": 365
+  },
+  "performance": {
+    "maxLoadTime": 3000,
+    "maxMemoryUsage": "100MB",
+    "maxApiResponseTime": 200
+  },
+  "security": {
+    "disallowHardcodedSecrets": true,
+    "requireHttps": true,
+    "csrfProtection": true,
+    "rateLimiting": true
+  },
+  "codeStyle": {
+    "enforceConsistentNaming": true,
+    "requireJsDoc": true,
+    "maxLineLength": 100,
+    "indentSize": 2
+  }
+}
