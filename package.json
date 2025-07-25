@@ -1,0 +1,30 @@
+{
+  "name": "claude-productivity-suite",
+  "version": "1.0.0",
+  "description": "AI-powered development commands for Claude Code",
+  "main": "install.sh",
+  "scripts": {
+    "install": "./install.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "productivity",
+    "development",
+    "automation",
+    "testing",
+    "deployment"
+  ],
+  "author": "Claude Productivity Suite Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/claude-productivity-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/claude-productivity-suite/issues"
+  },
+  "homepage": "https://github.com/yourusername/claude-productivity-suite#readme"
+}
