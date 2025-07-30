@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Create comprehensive spec for Velocity Score System - the core forecasting feature",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "create-velocity-spec"
+  },
+  {
+    "content": "Determine accurate current date for spec folder naming",
+    "status": "pending",
+    "priority": "high",
+    "id": "determine-current-date"
+  },
+  {
+    "content": "Set up spec folder and documentation structure",
+    "status": "pending",
+    "priority": "high",
+    "id": "create-spec-structure"
+  },
+  {
+    "content": "Define and document the velocity calculation algorithm",
+    "status": "pending",
+    "priority": "high",
+    "id": "define-velocity-algorithm"
+  },
+  {
+    "content": "Create detailed technical implementation spec",
+    "status": "pending",
+    "priority": "medium",
+    "id": "technical-specification"
+  },
+  {
+    "content": "Design database schema for velocity tracking data",
+    "status": "pending",
+    "priority": "medium",
+    "id": "database-schema-design"
+  },
+  {
+    "content": "Break down implementation into actionable tasks",
+    "status": "pending",
+    "priority": "low",
+    "id": "create-task-breakdown"
+  }
+]

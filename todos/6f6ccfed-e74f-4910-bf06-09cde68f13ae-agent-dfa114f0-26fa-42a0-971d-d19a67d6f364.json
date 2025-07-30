@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Update Jest configuration to include VideoGenerationPanel, AssetBrowser, and CampaignMatrix components in coverage collection",
+    "status": "completed",
+    "priority": "high",
+    "id": "expand-coverage-1"
+  },
+  {
+    "content": "Add src/lib/api/* pattern to coverage collection with proper exclusions",
+    "status": "completed",
+    "priority": "high",
+    "id": "expand-coverage-2"
+  },
+  {
+    "content": "Include all hooks from src/hooks/* in coverage tracking",
+    "status": "completed",
+    "priority": "high",
+    "id": "expand-coverage-3"
+  },
+  {
+    "content": "Verify existing test coverage for the newly included components",
+    "status": "completed",
+    "priority": "medium",
+    "id": "expand-coverage-4"
+  },
+  {
+    "content": "Run test suite to validate expanded coverage configuration",
+    "status": "completed",
+    "priority": "medium",
+    "id": "expand-coverage-5"
+  },
+  {
+    "content": "Update coverage thresholds for the expanded tracking scope",
+    "status": "completed",
+    "priority": "medium",
+    "id": "expand-coverage-6"
+  }
+]

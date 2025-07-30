@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Examine project structure and understand the application",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Set up and configure Supabase for the backend",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Install dependencies and get the app running locally",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Set up Playwright for testing",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Deploy to Netlify",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Run end-to-end tests with Playwright",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  }
+]

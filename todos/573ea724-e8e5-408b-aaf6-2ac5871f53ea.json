@@ -1,0 +1,50 @@
+[
+  {
+    "content": "Clone the AIRWAVE_0525_CODEX repository",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Analyze project structure and architecture",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Review code quality and conventions",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Check for security vulnerabilities",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Review performance considerations",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Check testing coverage and quality",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Review documentation completeness",
+    "status": "completed",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Provide comprehensive review summary",
+    "status": "completed",
+    "priority": "high",
+    "id": "8"
+  }
+]

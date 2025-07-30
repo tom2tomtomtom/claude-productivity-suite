@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Analyze code metrics and complexity across frontend and backend",
+    "status": "completed",
+    "priority": "high",
+    "id": "codebase-analysis-1"
+  },
+  {
+    "content": "Detect code duplication and patterns",
+    "status": "completed",
+    "priority": "high",
+    "id": "codebase-analysis-2"
+  },
+  {
+    "content": "Analyze dependencies and security vulnerabilities",
+    "status": "completed",
+    "priority": "high",
+    "id": "codebase-analysis-3"
+  },
+  {
+    "content": "Evaluate architecture health and patterns",
+    "status": "completed",
+    "priority": "high",
+    "id": "codebase-analysis-4"
+  },
+  {
+    "content": "Analyze performance and bundle characteristics",
+    "status": "completed",
+    "priority": "medium",
+    "id": "codebase-analysis-5"
+  },
+  {
+    "content": "Calculate maintainability score and generate reports",
+    "status": "completed",
+    "priority": "medium",
+    "id": "codebase-analysis-6"
+  }
+]

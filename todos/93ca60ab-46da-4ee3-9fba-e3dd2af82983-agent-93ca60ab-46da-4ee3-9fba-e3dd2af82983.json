@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Fix EnhancedBrandProfilerV2 instantiation in quick_start_v2.py lines 63 and 135",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix_api_key_1"
+  },
+  {
+    "content": "Fix EnhancedBrandProfilerV2 instantiation in competitive_grid_generator_v2.py line 35",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix_api_key_2"
+  },
+  {
+    "content": "Check and fix other files that instantiate EnhancedBrandProfilerV2",
+    "status": "completed",
+    "priority": "medium",
+    "id": "check_other_files"
+  }
+]

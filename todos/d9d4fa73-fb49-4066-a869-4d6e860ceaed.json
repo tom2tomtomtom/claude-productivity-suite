@@ -1,0 +1,62 @@
+[
+  {
+    "content": "Campaign Creation Wizard - Build comprehensive 4-step wizard with real API integration",
+    "status": "completed",
+    "priority": "high",
+    "id": "campaign_creation_wizard"
+  },
+  {
+    "content": "Asset Search & Filtering - Create advanced search with real-time data and bulk operations",
+    "status": "completed",
+    "priority": "high",
+    "id": "asset_search_filtering"
+  },
+  {
+    "content": "Client Management Forms - Enhance with 4-step stepper, logo upload, contact management",
+    "status": "completed",
+    "priority": "high",
+    "id": "client_management_forms"
+  },
+  {
+    "content": "Campaign Matrix Functionality - Add quality scoring, strategic combinations, performance insights",
+    "status": "completed",
+    "priority": "high",
+    "id": "campaign_matrix_functionality"
+  },
+  {
+    "content": "Real Data Integration - Replace mock data with Supabase integration across remaining components",
+    "status": "completed",
+    "priority": "medium",
+    "id": "real_data_integration"
+  },
+  {
+    "content": "Approval Workflow System - Create comprehensive approval APIs and enhanced UI with statistics",
+    "status": "completed",
+    "priority": "medium",
+    "id": "approval_workflow_system"
+  },
+  {
+    "content": "Video Generation Integration - Integrate video generation with campaign/matrix systems",
+    "status": "completed",
+    "priority": "medium",
+    "id": "video_generation_integration"
+  },
+  {
+    "content": "Analytics Dashboard - Enhanced analytics with performance tracking and insights",
+    "status": "completed",
+    "priority": "low",
+    "id": "analytics_dashboard"
+  },
+  {
+    "content": "Real-time Features - WebSocket integration for live updates and collaboration",
+    "status": "completed",
+    "priority": "low",
+    "id": "real_time_features"
+  },
+  {
+    "content": "Social Publishing UI - Direct publishing interface with platform integrations",
+    "status": "in_progress",
+    "priority": "low",
+    "id": "social_publishing_ui"
+  }
+]

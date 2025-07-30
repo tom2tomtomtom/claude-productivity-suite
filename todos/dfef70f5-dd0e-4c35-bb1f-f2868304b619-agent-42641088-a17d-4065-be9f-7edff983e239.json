@@ -1,0 +1,50 @@
+[
+  {
+    "content": "Check database schema and table structure",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Count records in all tables (courses, modules, lessons, prompts, quizzes, tasks)",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Analyze content quality and completeness in each table",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Check foreign key relationships between tables",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Sample lesson records to examine actual content",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Identify lessons with minimal vs rich content",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Check seeding logs to see which markdown files were used",
+    "status": "completed",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Compile comprehensive audit report",
+    "status": "completed",
+    "priority": "medium",
+    "id": "8"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "content": "Create MotivationGenerator component for psychological hooks",
+    "status": "completed",
+    "priority": "high",
+    "id": "flow-1"
+  },
+  {
+    "content": "Create CopyGenerator component for headlines and body copy",
+    "status": "completed",
+    "priority": "high",
+    "id": "flow-2"
+  },
+  {
+    "content": "Create new stores (motivationStore, copyStore, templateWorkflowStore)",
+    "status": "completed",
+    "priority": "high",
+    "id": "flow-3"
+  },
+  {
+    "content": "Update routing structure for new workflow",
+    "status": "completed",
+    "priority": "high",
+    "id": "flow-4"
+  },
+  {
+    "content": "Move TemplateSelector to first step",
+    "status": "completed",
+    "priority": "high",
+    "id": "flow-5"
+  },
+  {
+    "content": "Create TemplatePopulator component",
+    "status": "completed",
+    "priority": "medium",
+    "id": "flow-6"
+  },
+  {
+    "content": "Add motivation and copy generation API endpoints",
+    "status": "completed",
+    "priority": "medium",
+    "id": "flow-7"
+  },
+  {
+    "content": "Integrate asset selection into new flow",
+    "status": "completed",
+    "priority": "medium",
+    "id": "flow-8"
+  },
+  {
+    "content": "Create export functionality for final ads",
+    "status": "completed",
+    "priority": "low",
+    "id": "flow-9"
+  },
+  {
+    "content": "Test complete new workflow end-to-end",
+    "status": "completed",
+    "priority": "low",
+    "id": "flow-10"
+  }
+]

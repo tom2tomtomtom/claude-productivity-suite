@@ -1,0 +1,62 @@
+[
+  {
+    "content": "Generate comprehensive tests for useClientService hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Generate tests for useCSRF hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Generate tests for useData hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Generate tests for useFormValidation hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Generate tests for useRealTimeUpdates hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Generate tests for useRealtime hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Generate tests for useWorkflowErrorHandler hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  },
+  {
+    "content": "Generate tests for workflow hooks (useAssetActions, useBriefActions, etc.)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "8"
+  },
+  {
+    "content": "Generate tests for useAnalytics hook",
+    "status": "completed",
+    "priority": "medium",
+    "id": "9"
+  },
+  {
+    "content": "Create test utilities and setup helpers for hook testing",
+    "status": "completed",
+    "priority": "high",
+    "id": "10"
+  }
+]

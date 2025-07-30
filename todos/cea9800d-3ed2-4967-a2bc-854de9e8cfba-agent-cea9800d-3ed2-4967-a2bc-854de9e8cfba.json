@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Check code health and quality metrics",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "daily-1"
+  },
+  {
+    "content": "Review yesterday's work and current project status",
+    "status": "pending",
+    "priority": "high",
+    "id": "daily-2"
+  },
+  {
+    "content": "Analyze current development priorities",
+    "status": "pending",
+    "priority": "medium",
+    "id": "daily-3"
+  },
+  {
+    "content": "Identify next development tasks",
+    "status": "pending",
+    "priority": "medium",
+    "id": "daily-4"
+  },
+  {
+    "content": "Generate daily status report",
+    "status": "pending",
+    "priority": "low",
+    "id": "daily-5"
+  }
+]

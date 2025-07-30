@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Debug authentication 401 errors on /api/clients",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix routing navigation error on login redirect",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Update middleware to properly handle Supabase tokens",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

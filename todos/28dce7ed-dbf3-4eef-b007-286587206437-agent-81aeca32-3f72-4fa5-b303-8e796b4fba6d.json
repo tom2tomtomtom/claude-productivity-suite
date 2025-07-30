@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Analyze current git repository state and categorize modified/untracked files",
+    "status": "completed",
+    "priority": "high",
+    "id": "analyze-git-state"
+  },
+  {
+    "content": "Categorize files into: production code, tests, backups, temp files, documentation",
+    "status": "completed",
+    "priority": "high",
+    "id": "categorize-files"
+  },
+  {
+    "content": "Create cleanup strategy for temporary and backup files",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "cleanup-strategy"
+  },
+  {
+    "content": "Design logical commit strategy for meaningful changes",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "commit-strategy"
+  },
+  {
+    "content": "Update .gitignore to prevent future clutter",
+    "status": "pending",
+    "priority": "medium",
+    "id": "gitignore-updates"
+  }
+]

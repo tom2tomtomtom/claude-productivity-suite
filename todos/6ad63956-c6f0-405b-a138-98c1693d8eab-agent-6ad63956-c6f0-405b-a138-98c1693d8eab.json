@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Create service decomposition specs for mega-files",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Implement Phase 1: Code complexity reduction (60→85)",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create VisualCaptureService with tests and core functionality",
+    "status": "completed",
+    "priority": "high",
+    "id": "2a"
+  },
+  {
+    "content": "Implement Phase 2: Performance optimization (50→85)",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Implement Phase 3: Dependencies cleanup (85→95)",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Implement Phase 4: Testing enhancement (85→95)",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Generate updated health reports and metrics",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  }
+]

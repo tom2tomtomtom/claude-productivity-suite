@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Search for all files with incorrect supabase imports and categorize them",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Create a createClient export in @/lib/supabase/client that works for API routes",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Fix all API route files to use the correct import pattern",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Test the changes to ensure everything works correctly",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

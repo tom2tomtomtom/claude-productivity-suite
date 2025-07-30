@@ -1,0 +1,68 @@
+[
+  {
+    "content": "Analyze current TypeScript errors and linting issues",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Run type checking to identify syntax errors",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Run linting to identify code quality issues",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix TypeScript syntax errors",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Run build process to test overall progress",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Run final syntax fix scripts",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Document remaining issues and progress",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  },
+  {
+    "content": "Update CLAUDE.md with recovery status",
+    "status": "completed",
+    "priority": "high",
+    "id": "8"
+  },
+  {
+    "content": "Run final type check to confirm fixes",
+    "status": "pending",
+    "priority": "medium",
+    "id": "9"
+  },
+  {
+    "content": "Fix linting warnings and errors",
+    "status": "pending",
+    "priority": "low",
+    "id": "10"
+  },
+  {
+    "content": "Verify build process works",
+    "status": "pending",
+    "priority": "medium",
+    "id": "11"
+  }
+]

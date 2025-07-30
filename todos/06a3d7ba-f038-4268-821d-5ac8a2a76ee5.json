@@ -1,0 +1,68 @@
+[
+  {
+    "content": "Add authentication system with single shared credential",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Create Express.js backend API to replace frontend-only architecture",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Implement semantic matching using OpenAI embeddings and cosine similarity",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Add project metadata forms for client name, project type, wave number",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Implement backend project storage with filesystem structure",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Add codeframe persistence and tracking study codeframe reuse",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Enhance question grouping UI to support 3 specific question types",
+    "status": "completed",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Create Excel export with 2-sheet format (Coded_Responses and Codeframe)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "8"
+  },
+  {
+    "content": "Add 30% sampling workflow for initial codeframe generation",
+    "status": "completed",
+    "priority": "low",
+    "id": "9"
+  },
+  {
+    "content": "Redesign UX/UI to be cleaner and more intuitive",
+    "status": "completed",
+    "priority": "high",
+    "id": "10"
+  },
+  {
+    "content": "Test and deploy the enhanced application",
+    "status": "pending",
+    "priority": "low",
+    "id": "11"
+  }
+]

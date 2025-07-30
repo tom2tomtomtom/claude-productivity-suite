@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Remove unused SignupRequest interface at lines 6-10",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix supabase null safety issue at line 102 by adding non-null assertion",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Fix supabase null safety issue at line 157 by adding non-null assertion",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix supabase null safety issue at line 170 by adding non-null assertion",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Fix unused message variable at line 196 by using it in console.error",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  }
+]

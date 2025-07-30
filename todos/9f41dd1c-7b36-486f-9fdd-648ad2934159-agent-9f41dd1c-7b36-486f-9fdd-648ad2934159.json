@@ -1,0 +1,62 @@
+[
+  {
+    "content": "Create spec for splitting assetStore.ts into focused stores",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-spec1"
+  },
+  {
+    "content": "Execute tasks for assetStore.ts refactoring",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-spec1-execute"
+  },
+  {
+    "content": "Create spec for refactoring useMultimediaWorkflow hook",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-spec2"
+  },
+  {
+    "content": "Create spec for immediate cleanup tasks (duplicates, error boundaries)",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-spec3"
+  },
+  {
+    "content": "Execute cleanup tasks - remove duplicates and consolidate error boundaries",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-spec3-execute"
+  },
+  {
+    "content": "Run codebase analysis after Phase 1 completion",
+    "status": "completed",
+    "priority": "medium",
+    "id": "measure-phase1"
+  },
+  {
+    "content": "Update Agent OS roadmap with health improvement progress",
+    "status": "completed",
+    "priority": "medium",
+    "id": "update-roadmap"
+  },
+  {
+    "content": "Plan Phase 2: Performance optimization and lazy loading",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase2-planning"
+  },
+  {
+    "content": "Execute Phase 2 Task 1: Performance monitoring infrastructure setup",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase2-task1"
+  },
+  {
+    "content": "Execute Phase 2 Task 2: Bundle size optimization and code splitting",
+    "status": "pending",
+    "priority": "high",
+    "id": "phase2-task2"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Analyze codebase structure and identify console.log statements across all files",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Remove console.log statements and debug logging code",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Clean up unused imports and dead code",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Optimize file organization and remove duplicate files",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Remove obsolete documentation and cleanup files",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Fix import paths and dependencies optimization",
+    "status": "pending",
+    "priority": "low",
+    "id": "6"
+  },
+  {
+    "content": "Generate cleanup report with metrics and recommendations",
+    "status": "completed",
+    "priority": "low",
+    "id": "7"
+  }
+]

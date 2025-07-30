@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Fix generate-copy.ts - templates possibly undefined (line 366), typeCTAs possibly undefined (line 501), unused objective parameters (lines 564, 572, 576, 584), generic type mismatch (line 615)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix generate-motivations.ts - unused loggers import (line 6)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Fix parse-brief.ts - unused fields variable (line 406), object possibly undefined (lines 548, 564)",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

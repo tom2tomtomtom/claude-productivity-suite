@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Create comprehensive UI/UX test suite",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Test all buttons and interactive elements",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Test all text fields with dummy data",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Test complete user workflows",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Generate test report with screenshots",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  }
+]

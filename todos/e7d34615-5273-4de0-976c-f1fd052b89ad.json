@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Fix critical security vulnerabilities (API keys, demo mode)",
+    "status": "pending",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Implement proper API proxy layer for external services",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Clean up code duplication and refactor large components",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix TypeScript errors and improve type safety",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Implement comprehensive error handling and logging",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Add performance optimizations and code splitting",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Enhance testing coverage and add integration tests",
+    "status": "pending",
+    "priority": "low",
+    "id": "7"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "content": "Write tests for cookie-based authentication flow",
+    "status": "completed",
+    "priority": "high",
+    "id": "task-2-1"
+  },
+  {
+    "content": "Install cookie management dependencies (cookie ^0.6.0)",
+    "status": "completed",
+    "priority": "high",
+    "id": "task-2-2"
+  },
+  {
+    "content": "Create cookie utilities for secure token storage",
+    "status": "completed",
+    "priority": "high",
+    "id": "task-2-3"
+  },
+  {
+    "content": "Update authentication endpoints to set HTTP-only cookies",
+    "status": "completed",
+    "priority": "high",
+    "id": "task-2-4"
+  },
+  {
+    "content": "Modify token verification to extract from cookies instead of headers",
+    "status": "completed",
+    "priority": "high",
+    "id": "task-2-5"
+  },
+  {
+    "content": "Update frontend authStore to work with cookie-based authentication",
+    "status": "completed",
+    "priority": "high",
+    "id": "task-2-6"
+  },
+  {
+    "content": "Verify cross-domain compatibility for Netlify deployment",
+    "status": "completed",
+    "priority": "medium",
+    "id": "task-2-7"
+  },
+  {
+    "content": "Verify all tests pass and cookie security is properly implemented",
+    "status": "completed",
+    "priority": "high",
+    "id": "task-2-8"
+  }
+]

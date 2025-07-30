@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Implement real Supabase Storage for asset uploads",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-supabase-storage"
+  },
+  {
+    "content": "Connect OpenAI API for content generation",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-openai-integration"
+  },
+  {
+    "content": "Fix Creatomate API integration for video rendering",
+    "status": "completed",
+    "priority": "high",
+    "id": "phase1-creatomate-fix"
+  },
+  {
+    "content": "Implement WebSocket for real-time updates",
+    "status": "completed",
+    "priority": "medium",
+    "id": "phase1-websocket"
+  },
+  {
+    "content": "Test each integration with Playwright",
+    "status": "completed",
+    "priority": "high",
+    "id": "testing-integration"
+  }
+]

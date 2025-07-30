@@ -1,0 +1,98 @@
+[
+  {
+    "content": "Enhance database schema with new tables for interactive textbook content",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-1"
+  },
+  {
+    "content": "Create lessons table with rich text content and embedded prompts",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-2"
+  },
+  {
+    "content": "Add user scenario customization system for personalized learning",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-2b"
+  },
+  {
+    "content": "Create prompts table for copy-paste templates organized by platform",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-3"
+  },
+  {
+    "content": "Create quizzes table with questions, answers, and explanations",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-4"
+  },
+  {
+    "content": "Create tasks table with completion tracking and validation",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-5"
+  },
+  {
+    "content": "Create setup script to apply all new schemas and seed all content",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-6a"
+  },
+  {
+    "content": "Update claude.md with new interactive textbook approach",
+    "status": "completed",
+    "priority": "medium",
+    "id": "content-6b"
+  },
+  {
+    "content": "Complete Level 1 content - add remaining 8 lessons to reach 16 total",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-7a"
+  },
+  {
+    "content": "Add remaining prompts to reach 50+ total",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-7b"
+  },
+  {
+    "content": "Add remaining quizzes and tasks for complete Level 1",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-7c"
+  },
+  {
+    "content": "Update setup script to include all new content",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-8a"
+  },
+  {
+    "content": "Create API endpoints for new interactive content",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-8"
+  },
+  {
+    "content": "Create final testing and validation script",
+    "status": "completed",
+    "priority": "high",
+    "id": "content-9a"
+  },
+  {
+    "content": "Create comprehensive README for the interactive textbook system",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "content-10"
+  },
+  {
+    "content": "Test complete system integration",
+    "status": "pending",
+    "priority": "high",
+    "id": "content-9"
+  }
+]

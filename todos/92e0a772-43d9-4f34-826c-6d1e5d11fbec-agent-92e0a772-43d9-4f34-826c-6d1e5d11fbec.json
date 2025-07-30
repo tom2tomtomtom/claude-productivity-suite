@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Redesign core architecture: AI-first for intelligence, scraping-second for visuals",
+    "status": "completed",
+    "priority": "high",
+    "id": "redesign_architecture"
+  },
+  {
+    "content": "Create comprehensive AI research phase to get company data first",
+    "status": "completed",
+    "priority": "high",
+    "id": "create_ai_research_phase"
+  },
+  {
+    "content": "Simplify scraping to focus only on visuals (colors, fonts, screenshots)",
+    "status": "completed",
+    "priority": "high",
+    "id": "simplify_scraping_phase"
+  },
+  {
+    "content": "Create data merging system to combine AI insights with visual elements",
+    "status": "completed",
+    "priority": "medium",
+    "id": "merge_ai_visual_data"
+  },
+  {
+    "content": "Update report generation to use rich AI data as primary source",
+    "status": "completed",
+    "priority": "medium",
+    "id": "update_report_generation"
+  },
+  {
+    "content": "Test AI-first system with real company data",
+    "status": "completed",
+    "priority": "high",
+    "id": "test_ai_first_system"
+  },
+  {
+    "content": "Deploy updated AI-first system to Railway",
+    "status": "completed",
+    "priority": "high",
+    "id": "deploy_ai_first_system"
+  }
+]

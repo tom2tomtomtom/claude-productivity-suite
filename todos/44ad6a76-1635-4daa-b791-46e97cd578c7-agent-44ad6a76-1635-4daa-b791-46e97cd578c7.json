@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Analyze project structure and dependencies",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Calculate code complexity metrics",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Detect code duplication and smells",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Analyze architecture and patterns",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Evaluate performance and bundle size",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Generate health reports and recommendations",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Create Stripe-style sophisticated PDF report generator",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Implement brand grid layout with logos and positioning",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Add color palette extraction and visual elements",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Create individual brand deep-dive pages",
+    "status": "pending",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Add brand architecture and digital presence analysis",
+    "status": "pending",
+    "priority": "high",
+    "id": "5"
+  }
+]

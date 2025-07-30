@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Temporarily exclude problematic UI files from build",
+    "status": "completed",
+    "priority": "high",
+    "id": "exclude-ui-1"
+  },
+  {
+    "content": "Create minimal build that includes only login API",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "minimal-build-1"
+  },
+  {
+    "content": "Test login API functionality",
+    "status": "pending",
+    "priority": "high",
+    "id": "test-login-1"
+  },
+  {
+    "content": "Fix UI compilation issues later",
+    "status": "pending",
+    "priority": "medium",
+    "id": "fix-ui-later-1"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Fix Google Fonts 404 error",
+    "status": "completed",
+    "priority": "high",
+    "id": "22"
+  },
+  {
+    "content": "Fix copy generation API 400 error",
+    "status": "completed",
+    "priority": "high",
+    "id": "23"
+  }
+]

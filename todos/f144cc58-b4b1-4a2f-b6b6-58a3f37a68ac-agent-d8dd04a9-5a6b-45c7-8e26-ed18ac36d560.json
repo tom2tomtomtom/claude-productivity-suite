@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Fix API test utilities type casting and NextApiRequest/Response compatibility",
+    "status": "pending",
+    "priority": "high",
+    "id": "ts-foundation-1"
+  },
+  {
+    "content": "Resolve dynamic imports type mismatches and component loading issues",
+    "status": "pending",
+    "priority": "high",
+    "id": "ts-foundation-2"
+  },
+  {
+    "content": "Add proper type definitions for service modules (assetManager, motivationGenerator, etc.)",
+    "status": "pending",
+    "priority": "high",
+    "id": "ts-foundation-3"
+  },
+  {
+    "content": "Fix logging context type inconsistencies across service modules",
+    "status": "pending",
+    "priority": "medium",
+    "id": "ts-foundation-4"
+  },
+  {
+    "content": "Establish proper type declaration patterns for custom modules",
+    "status": "pending",
+    "priority": "medium",
+    "id": "ts-foundation-5"
+  }
+]

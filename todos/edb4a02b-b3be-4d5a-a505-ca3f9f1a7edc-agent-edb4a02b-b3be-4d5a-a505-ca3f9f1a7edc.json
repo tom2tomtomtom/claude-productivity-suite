@@ -1,0 +1,56 @@
+[
+  {
+    "content": "Complete existing platform-audit-fixes spec Tasks 10-11",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Create god object decomposition spec for templateService.ts",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create code duplication elimination spec",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Execute security hardening and test stability fixes",
+    "status": "pending",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Execute template service decomposition",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Execute store architecture improvements",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Execute performance optimization spec",
+    "status": "pending",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Set up continuous monitoring with codebase OS",
+    "status": "pending",
+    "priority": "low",
+    "id": "8"
+  },
+  {
+    "content": "Final integration and validation",
+    "status": "pending",
+    "priority": "low",
+    "id": "9"
+  }
+]

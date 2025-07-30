@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Write comprehensive tests for existing AIAssetPipelineOrchestrator functionality before refactoring",
+    "status": "completed",
+    "priority": "high",
+    "id": "orchestrator-baseline-tests"
+  },
+  {
+    "content": "Update service registration in dependency injection container for extracted services",
+    "status": "completed",
+    "priority": "high",
+    "id": "update-service-registration"
+  },
+  {
+    "content": "Verify all extracted services pass individual and integration tests",
+    "status": "completed",
+    "priority": "medium",
+    "id": "verify-extracted-services"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "content": "🎯 GENERATE REAL MP4 VIDEO OUTPUT - NO EXCUSES",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "generate-real-mp4"
+  },
+  {
+    "content": "1. CONFIRMED: API routes work locally, issue is Netlify deployment",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix-static-export"
+  },
+  {
+    "content": "2. Fix Netlify deployment so functions actually deploy",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "fix-netlify-deployment"
+  },
+  {
+    "content": "3. Test video generation API with real environment variables",
+    "status": "pending",
+    "priority": "high",
+    "id": "test-video-api"
+  },
+  {
+    "content": "4. Download actual MP4 file as proof",
+    "status": "pending",
+    "priority": "high",
+    "id": "download-mp4"
+  }
+]

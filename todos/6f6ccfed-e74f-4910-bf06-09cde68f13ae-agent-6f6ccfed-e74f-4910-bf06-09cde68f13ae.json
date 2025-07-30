@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Phase 1A: Console Statement Cleanup - Remove/replace 768+ production console statements across 360 files with proper logging",
+    "status": "pending",
+    "priority": "high",
+    "id": "console-cleanup"
+  },
+  {
+    "content": "Phase 1B: Security Vulnerability Patches - Fix 6 moderate severity vulnerabilities (esbuild, prismjs)",
+    "status": "pending",
+    "priority": "high",
+    "id": "security-patches"
+  },
+  {
+    "content": "Phase 1C: Bundle Size Optimization - Reduce from 481KB to <300KB via code splitting and tree shaking",
+    "status": "pending",
+    "priority": "high",
+    "id": "bundle-optimization"
+  },
+  {
+    "content": "Phase 2A: ErrorBoundary Consolidation - Replace 4 implementations with single UnifiedErrorBoundary",
+    "status": "pending",
+    "priority": "medium",
+    "id": "error-boundary-consolidation"
+  }
+]

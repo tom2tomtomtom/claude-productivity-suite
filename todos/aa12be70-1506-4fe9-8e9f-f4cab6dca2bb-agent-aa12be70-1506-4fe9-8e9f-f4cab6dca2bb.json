@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Perform complete end-to-end system test with real data only",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Test all API endpoints with real medical industry URLs",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Verify real logo extraction and visual asset capture",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Validate real color palette and typography detection",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Generate actual enterprise report with real visual grid",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Verify all data is authentic with no fallbacks",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "content": "Day 1 Security Emergency: Rotate Creatomate API key, remove hardcoded credentials, fix exposed accounts",
+    "status": "completed",
+    "priority": "high",
+    "id": "security-audit"
+  },
+  {
+    "content": "Fix build configuration - remove error suppressions in next.config.js",
+    "status": "completed",
+    "priority": "high",
+    "id": "build-config-fix"
+  },
+  {
+    "content": "Fix all 483 TypeScript errors preventing production builds",
+    "status": "completed",
+    "priority": "high",
+    "id": "typescript-errors"
+  },
+  {
+    "content": "Install missing critical dependencies: redis, pg, node-statsd",
+    "status": "completed",
+    "priority": "high",
+    "id": "missing-dependencies"
+  },
+  {
+    "content": "Fix Supabase client import issues across 47 files",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "supabase-imports"
+  },
+  {
+    "content": "Optimize 2MB middleware bundle causing 3.4s delays",
+    "status": "pending",
+    "priority": "high",
+    "id": "middleware-optimization"
+  },
+  {
+    "content": "Fix Netlify incompatibilities - file system operations and BullMQ workers",
+    "status": "pending",
+    "priority": "high",
+    "id": "netlify-compatibility"
+  },
+  {
+    "content": "Fix 57 failing tests due to response format mismatches",
+    "status": "pending",
+    "priority": "medium",
+    "id": "test-infrastructure"
+  }
+]

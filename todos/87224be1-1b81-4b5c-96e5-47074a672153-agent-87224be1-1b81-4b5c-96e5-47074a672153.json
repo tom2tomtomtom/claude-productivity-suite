@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Execute console statement cleanup (768+ statements)",
+    "status": "completed",
+    "priority": "high",
+    "id": "deploy-1"
+  },
+  {
+    "content": "Fix security vulnerabilities (6 moderate issues)",
+    "status": "completed",
+    "priority": "high",
+    "id": "deploy-2"
+  },
+  {
+    "content": "Fix logger import syntax errors preventing build compilation",
+    "status": "completed",
+    "priority": "high",
+    "id": "deploy-3a"
+  },
+  {
+    "content": "Optimize bundle size (481KB → <300KB)",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "deploy-3"
+  },
+  {
+    "content": "Configure production environment variables",
+    "status": "pending",
+    "priority": "medium",
+    "id": "deploy-4"
+  },
+  {
+    "content": "Deploy to Railway/Vercel",
+    "status": "pending",
+    "priority": "medium",
+    "id": "deploy-5"
+  },
+  {
+    "content": "Set up user testing environment",
+    "status": "pending",
+    "priority": "medium",
+    "id": "deploy-6"
+  }
+]

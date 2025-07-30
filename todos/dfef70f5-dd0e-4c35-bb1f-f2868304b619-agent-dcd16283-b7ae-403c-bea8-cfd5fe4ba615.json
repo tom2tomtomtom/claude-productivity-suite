@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Complete Database Content Audit - Query all courses, modules, and lessons in database",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Complete Markdown File Inventory - Find and catalog ALL .md files with content analysis",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Seeding Script Analysis - Examine ALL seeding scripts and moduleFileMapping",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "API Endpoint Verification - Test EVERY course API endpoint with correct UUIDs",
+    "status": "pending",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Frontend Content Display Analysis - Use Playwright to test every course page",
+    "status": "pending",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Gap Analysis - Create comprehensive report with exact fixes needed",
+    "status": "pending",
+    "priority": "high",
+    "id": "6"
+  }
+]

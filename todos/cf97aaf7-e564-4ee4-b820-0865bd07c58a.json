@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Clone and examine the AIRWAVE codebase structure",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Set up Playwright testing environment",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Analyze app structure and identify all UI components to test",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Create comprehensive E2E test covering login with provided credentials",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Test all buttons, forms, and interactive elements with dummy data",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Fix any errors discovered during testing",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Verify full application functionality end-to-end",
+    "status": "pending",
+    "priority": "medium",
+    "id": "7"
+  }
+]

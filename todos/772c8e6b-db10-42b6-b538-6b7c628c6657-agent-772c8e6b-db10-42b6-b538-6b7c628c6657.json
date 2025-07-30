@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Perform comprehensive codebase health analysis",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "analyze-1"
+  },
+  {
+    "content": "Calculate code complexity metrics and identify problem areas",
+    "status": "pending",
+    "priority": "high",
+    "id": "analyze-2"
+  },
+  {
+    "content": "Analyze dependencies and security vulnerabilities",
+    "status": "pending",
+    "priority": "high",
+    "id": "analyze-3"
+  },
+  {
+    "content": "Evaluate performance bottlenecks and optimization opportunities",
+    "status": "pending",
+    "priority": "medium",
+    "id": "analyze-4"
+  },
+  {
+    "content": "Generate comprehensive health reports",
+    "status": "pending",
+    "priority": "medium",
+    "id": "analyze-5"
+  }
+]

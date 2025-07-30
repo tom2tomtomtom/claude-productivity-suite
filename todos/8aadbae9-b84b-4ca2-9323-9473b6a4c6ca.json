@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Try alternative Netlify configuration approach",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Set explicit publish directory to avoid base directory conflict",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Test deployment with new configuration",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  }
+]

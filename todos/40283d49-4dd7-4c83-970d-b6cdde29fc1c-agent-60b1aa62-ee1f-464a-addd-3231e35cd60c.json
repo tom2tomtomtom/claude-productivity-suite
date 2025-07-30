@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Create comprehensive test suite for AIImageGenerator component - covers core business logic, API integration, validation, and error handling",
+    "status": "completed",
+    "priority": "high",
+    "id": "test-ai-image-generator"
+  },
+  {
+    "content": "Create comprehensive test suite for VideoGenerationPanel component - covers video workflow, job management, real-time updates",
+    "status": "completed",
+    "priority": "high",
+    "id": "test-video-generation-panel"
+  },
+  {
+    "content": "Create comprehensive test suite for AssetBrowser component - covers asset management, search/filter, selection modes",
+    "status": "completed",
+    "priority": "high",
+    "id": "test-asset-browser"
+  },
+  {
+    "content": "Create focused test suites for large components (video-studio.tsx, clients.tsx) - target high-impact functionality",
+    "status": "completed",
+    "priority": "medium",
+    "id": "test-large-components"
+  }
+]

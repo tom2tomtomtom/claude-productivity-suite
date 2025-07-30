@@ -1,0 +1,50 @@
+[
+  {
+    "content": "SECURITY: Fix PrismJS DOM Clobbering vulnerability (version 1.27.0 < 1.30.0)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Find hardcoded URLs and replace with environment variables",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Fix unhandled error patterns in fetch calls",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Add loading states to data fetching operations",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Implement form validation improvements",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Add security headers configuration",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Fix mobile responsiveness issues",
+    "status": "completed",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Create .env.example with required variables",
+    "status": "completed",
+    "priority": "medium",
+    "id": "8"
+  }
+]

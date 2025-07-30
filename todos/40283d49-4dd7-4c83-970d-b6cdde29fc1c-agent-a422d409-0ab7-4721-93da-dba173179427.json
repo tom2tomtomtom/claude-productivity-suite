@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Fix TypeScript errors in /Users/thomasdowuona-hyde/airflow/src/pages/api/copy-assets/[id].ts - unused message variable (line 44) and unused req parameters (lines 53, 232)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix TypeScript errors in /Users/thomasdowuona-hyde/airflow/src/pages/api/copy-assets/[id]/performance.ts - unused message variable (line 27)",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Fix TypeScript errors in /Users/thomasdowuona-hyde/airflow/src/pages/api/copy-assets/[id]/versions.ts - unused message variable (line 34) and object possibly undefined (lines 128, 161)",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix TypeScript errors in /Users/thomasdowuona-hyde/airflow/src/pages/api/copy-assets/index.ts - unused schema declaration (line 50), unused message variable (line 66), and object possibly undefined (line 307)",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Fix TypeScript errors in /Users/thomasdowuona-hyde/airflow/src/pages/api/copy-assets/search.ts - unused message variables (lines 182, 252)",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Fix TypeScript errors in /Users/thomasdowuona-hyde/airflow/src/pages/api/dalle.ts - unused message variable (line 254)",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Fix TypeScript errors in /Users/thomasdowuona-hyde/airflow/src/pages/api/dashboard/stats.ts - Supabase null safety issues (lines 77, 109, 116)",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  }
+]

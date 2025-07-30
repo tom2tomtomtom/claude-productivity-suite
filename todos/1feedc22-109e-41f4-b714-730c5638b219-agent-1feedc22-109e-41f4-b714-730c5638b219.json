@@ -1,0 +1,56 @@
+[
+  {
+    "content": "Set up HTML structure and basic styling",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Create game canvas and basic rendering system",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Implement player ship with movement controls",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Add shooting mechanics and bullets",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Create enemy ships (landers) with AI",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Implement humanoids that enemies can abduct",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Add collision detection system",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  },
+  {
+    "content": "Create scoring system and UI",
+    "status": "completed",
+    "priority": "low",
+    "id": "8"
+  },
+  {
+    "content": "Add sound effects and game over mechanics",
+    "status": "completed",
+    "priority": "low",
+    "id": "9"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Scan and analyze rich content files in courses-complete directory",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Create rich content database import script",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Clear template content and import actual lesson content",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Validate rich content displays properly in app",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  }
+]

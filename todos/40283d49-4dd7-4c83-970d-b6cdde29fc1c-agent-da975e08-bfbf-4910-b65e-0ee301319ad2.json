@@ -1,0 +1,68 @@
+[
+  {
+    "content": "Fix line 366: templates possibly undefined - add non-null assertion or null check",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix_line_366"
+  },
+  {
+    "content": "Fix line 406: string | undefined type mismatch when using key.split()[0]",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix_line_406"
+  },
+  {
+    "content": "Fix line 501: typeCTAs possibly undefined when accessing array element",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix_line_501"
+  },
+  {
+    "content": "Fix line 561: numbers array access might return undefined",
+    "status": "completed",
+    "priority": "high",
+    "id": "fix_line_561"
+  },
+  {
+    "content": "Fix unused variable 'platform' in generateCTA function (line 484)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "fix_unused_vars_484"
+  },
+  {
+    "content": "Fix unused parameter 'objective' in extractTransformation function (line 523)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "fix_unused_vars_523"
+  },
+  {
+    "content": "Fix unused parameter 'objective' in extractProblem function (line 539)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "fix_unused_vars_539"
+  },
+  {
+    "content": "Fix unused parameter 'objective' in extractPainPoint function (line 543)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "fix_unused_vars_543"
+  },
+  {
+    "content": "Fix unused parameter 'audience' in extractLifestyle function (line 547)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "fix_unused_vars_547"
+  },
+  {
+    "content": "Fix unused parameter 'objective' in extractDream function (line 551)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "fix_unused_vars_551"
+  },
+  {
+    "content": "Fix unused parameter 'objective' in extractAspiration function (line 555)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "fix_unused_vars_555"
+  }
+]
