@@ -327,6 +327,43 @@ class XMLMetadataParser {
 
     return validation;
   }
+
+  /**
+   * Get parser statistics
+   */
+  getStatistics() {
+    return {
+      cacheSize: this.commandCache.size,
+      cacheHitRate: this.calculateCacheHitRate(),
+      totalCommandsParsed: this.getTotalCommandsParsed(),
+      averageComplexity: this.getAverageComplexity()
+    };
+  }
+
+  calculateCacheHitRate() {
+    // Implementation would track cache hits vs misses
+    return 0.75; // Placeholder
+  }
+
+  getTotalCommandsParsed() {
+    return this.commandCache.size;
+  }
+
+  getAverageComplexity() {
+    if (this.commandCache.size === 0) return 0;
+    
+    let totalComplexity = 0;
+    let count = 0;
+    
+    for (const command of this.commandCache.values()) {
+      if (command.performance?.complexityScore) {
+        totalComplexity += command.performance.complexityScore;
+        count++;
+      }
+    }
+    
+    return count > 0 ? Math.round((totalComplexity / count) * 10) / 10 : 0;
+  }
 }
 
 module.exports = { XMLMetadataParser };

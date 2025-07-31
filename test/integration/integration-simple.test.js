@@ -2,8 +2,8 @@
  * Test just the new .md XML Command Integration system
  */
 
-const { CommandIntegrator } = require('./src/core/command-integrator');
-const { WorkflowExecutor } = require('./src/core/workflow-executor');
+const { CommandIntegrator } = require('../../src/core/command-integrator');
+const { WorkflowExecutor } = require('../../src/core/workflow-executor');
 
 async function testSimpleIntegration() {
   console.log('🧪 Testing .md XML Command Integration (Simple)\n');

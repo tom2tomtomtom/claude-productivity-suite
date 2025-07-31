@@ -4,16 +4,20 @@
  */
 
 const { AgentPool } = require('./agent-pool');
-const { TokenEfficiencyAnalyzer } = require('./token-efficiency-analyzer');
+const { TokenOptimizer } = require('./token-optimizer');
 const { PatternMatcher } = require('./pattern-matcher');
 const { RoutingMetrics } = require('./routing-metrics');
+const { ParallelExecutionCoordinator } = require('./parallel-execution-coordinator');
+const { RoutingDecisionEngine } = require('./routing-decision-engine');
 
 class IntelligentRouter {
   constructor() {
     this.agents = new AgentPool();
-    this.tokenAnalyzer = new TokenEfficiencyAnalyzer();
+    this.tokenOptimizer = new TokenOptimizer();
     this.patternMatcher = new PatternMatcher();
     this.metrics = new RoutingMetrics();
+    this.parallelCoordinator = new ParallelExecutionCoordinator();
+    this.routingDecisionEngine = new RoutingDecisionEngine();
     
     this.routingRules = this.loadRoutingRules();
     this.routingHistory = new Map();
@@ -80,39 +84,68 @@ class IntelligentRouter {
   }
 
   async determineOptimalRoute(parsedCommand, sessionContext, options = {}) {
-    const routingOptions = await this.generateRoutingOptions(parsedCommand, sessionContext);
+    console.log('🎯 Starting intelligent routing with token optimization...');
     
-    // Score each routing option
-    const scoredOptions = await Promise.all(
-      routingOptions.map(option => this.scoreRoutingOption(option, sessionContext, options))
+    // First, get token-optimized analysis
+    const tokenOptimizedPlan = await this.tokenOptimizer.optimizeVibeProcessing(
+      parsedCommand, sessionContext
     );
     
-    // Select optimal route
-    const optimal = this.selectOptimalRoute(scoredOptions, options);
+    // Generate routing options with token optimization context
+    const routingOptions = await this.generateRoutingOptions(
+      parsedCommand, sessionContext, tokenOptimizedPlan
+    );
+    
+    // Score each routing option with token optimization
+    const scoredOptions = await Promise.all(
+      routingOptions.map(option => this.scoreRoutingOption(
+        option, sessionContext, options, tokenOptimizedPlan
+      ))
+    );
+    
+    // Select optimal route using enhanced decision engine
+    const optimal = await this.routingDecisionEngine.selectOptimalRoute(
+      scoredOptions, options, tokenOptimizedPlan
+    );
+    
+    // Check for parallel execution opportunities
+    const parallelPlan = await this.parallelCoordinator.analyzePrallelExecution(
+      optimal, parsedCommand, sessionContext
+    );
     
     // Record routing decision
-    await this.recordRoutingDecision(parsedCommand, optimal, scoredOptions);
+    await this.recordRoutingDecision(parsedCommand, optimal, scoredOptions, tokenOptimizedPlan);
+    
+    console.log(`✅ Routing complete: ${optimal.agent} (${Math.round(optimal.confidence * 100)}% confidence, ${tokenOptimizedPlan.tokenSavings.percentage}% token savings)`);
     
     return {
       selectedAgent: optimal.agent,
       selectedRoute: optimal,
       confidence: optimal.confidence,
       reasoning: this.generateRoutingReasoning(optimal, scoredOptions),
-      expectedTokenSavings: optimal.tokenSavings,
+      expectedTokenSavings: tokenOptimizedPlan.tokenSavings,
+      tokenOptimization: tokenOptimizedPlan,
+      parallelExecution: parallelPlan,
       alternativeRoutes: scoredOptions.filter(opt => opt !== optimal)
     };
   }
 
-  async generateRoutingOptions(parsedCommand, sessionContext) {
+  async generateRoutingOptions(parsedCommand, sessionContext, tokenOptimizedPlan = null) {
     const options = [];
     
     // Rule-based routing options
     const ruleMatches = this.matchRoutingRules(parsedCommand);
     options.push(...ruleMatches);
     
-    // Pattern-based routing options
-    const patternMatches = await this.matchPatterns(parsedCommand, sessionContext);
+    // Pattern-based routing options with token optimization
+    const patternMatches = await this.matchPatterns(parsedCommand, sessionContext, tokenOptimizedPlan);
     options.push(...patternMatches);
+    
+    // Token optimizer suggested routing
+    if (tokenOptimizedPlan && tokenOptimizedPlan.plan && tokenOptimizedPlan.plan.steps) {
+      const optimizerSuggestions = this.extractRoutingFromOptimizedPlan(tokenOptimizedPlan);
+      options.push(...optimizerSuggestions);
+    }
     
     // Historical routing options
     const historicalMatches = await this.findSimilarHistoricalRoutes(parsedCommand, sessionContext);
@@ -182,14 +215,13 @@ class IntelligentRouter {
     }));
   }
 
-  async scoreRoutingOption(option, sessionContext, optimizationOptions) {
+  async scoreRoutingOption(option, sessionContext, optimizationOptions, tokenOptimizedPlan = null) {
     const baseScore = option.confidence || 0.5;
     
-    // Token efficiency scoring
-    const tokenEfficiency = await this.tokenAnalyzer.analyzeRoutingEfficiency(
-      option.agent,
-      sessionContext
-    );
+    // Token efficiency scoring using our completed TokenOptimizer
+    const tokenEfficiency = tokenOptimizedPlan 
+      ? this.calculateTokenEfficiencyFromPlan(option.agent, tokenOptimizedPlan)
+      : await this.estimateTokenEfficiency(option.agent, sessionContext);
     
     // Agent performance scoring
     const agentPerformance = await this.agents.getAgentPerformance(option.agent);
@@ -263,7 +295,7 @@ class IntelligentRouter {
     return reasoning.join('. ');
   }
 
-  async recordRoutingDecision(command, selectedRoute, allOptions) {
+  async recordRoutingDecision(command, selectedRoute, allOptions, tokenOptimizedPlan = null) {
     const record = {
       timestamp: new Date(),
       command,
@@ -274,7 +306,13 @@ class IntelligentRouter {
         score: opt.compositeScore,
         source: opt.source
       })),
-      reasoning: selectedRoute.reasoning
+      reasoning: selectedRoute.reasoning,
+      tokenOptimization: tokenOptimizedPlan ? {
+        baseline: tokenOptimizedPlan.tokenSavings.baseline,
+        optimized: tokenOptimizedPlan.tokenSavings.optimized, 
+        saved: tokenOptimizedPlan.tokenSavings.saved,
+        percentage: tokenOptimizedPlan.tokenSavings.percentage
+      } : null
     };
     
     // Store for learning
@@ -376,6 +414,84 @@ class IntelligentRouter {
       tokenEfficiencyImprovement: recent.tokenEfficiency - baseline.tokenEfficiency,
       userSatisfactionImprovement: recent.userSatisfaction - baseline.userSatisfaction
     };
+  }
+
+  // New helper methods for token optimization integration
+
+  extractRoutingFromOptimizedPlan(tokenOptimizedPlan) {
+    const suggestions = [];
+    
+    if (tokenOptimizedPlan.plan && tokenOptimizedPlan.plan.steps) {
+      tokenOptimizedPlan.plan.steps.forEach(step => {
+        if (step.type === 'efficient-routing' && step.routing) {
+          suggestions.push({
+            agent: step.routing.primarySpecialist,
+            confidence: 0.85,
+            reasoning: `Token optimizer suggests ${step.routing.primarySpecialist} for optimal efficiency`,
+            tokenSavings: step.tokenSavings / 1000, // Convert to percentage
+            source: 'token-optimizer',
+            supportingAgents: step.routing.supportingSpecialists || []
+          });
+        }
+      });
+    }
+    
+    return suggestions;
+  }
+
+  calculateTokenEfficiencyFromPlan(agentType, tokenOptimizedPlan) {
+    const baseline = tokenOptimizedPlan.tokenSavings.baseline;
+    const optimized = tokenOptimizedPlan.tokenSavings.optimized;
+    
+    return {
+      score: (baseline - optimized) / baseline,
+      estimatedSavings: tokenOptimizedPlan.tokenSavings.saved,
+      efficiency: tokenOptimizedPlan.tokenSavings.percentage / 100,
+      source: 'token-optimizer'
+    };
+  }
+
+  async estimateTokenEfficiency(agentType, sessionContext) {
+    // Fallback token efficiency estimation when no optimized plan available
+    const agentEfficiencyMap = {
+      'frontend-specialist': 0.65,
+      'backend-specialist': 0.70,
+      'database-specialist': 0.75,
+      'deployment-specialist': 0.60,
+      'testing-specialist': 0.55,
+      'project-manager': 0.50
+    };
+    
+    const baseEfficiency = agentEfficiencyMap[agentType] || 0.50;
+    
+    return {
+      score: baseEfficiency,
+      estimatedSavings: Math.round(baseEfficiency * 1000), // Rough token estimate
+      efficiency: baseEfficiency,
+      source: 'estimated'
+    };
+  }
+
+  async matchPatterns(parsedCommand, sessionContext, tokenOptimizedPlan = null) {
+    let patterns = await this.patternMatcher.findMatchingPatterns(parsedCommand, sessionContext);
+    
+    // If we have token optimization data, enhance pattern matching
+    if (tokenOptimizedPlan && tokenOptimizedPlan.patterns) {
+      const optimizedPatterns = tokenOptimizedPlan.patterns.map(pattern => ({
+        id: pattern.id || 'token-optimized-pattern',
+        confidence: 0.90,
+        estimatedTokenSavings: pattern.tokenSavings || 0.30
+      }));
+      patterns = [...patterns, ...optimizedPatterns];
+    }
+    
+    return patterns.map(pattern => ({
+      agent: this.routingRules.patterns.find(p => p.pattern === pattern.id)?.agent || 'project-manager',
+      confidence: pattern.confidence,
+      reasoning: `Enhanced pattern match: ${pattern.id} (${Math.round(pattern.confidence * 100)}% confidence)`,
+      tokenSavings: pattern.estimatedTokenSavings,
+      source: 'enhanced-patterns'
+    }));
   }
 }
 

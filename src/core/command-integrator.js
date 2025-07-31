@@ -555,7 +555,15 @@ class CommandIntegrator {
    */
   reset() {
     this.mdProcessor.clearCache();
+    this.xmlParser.clearCache();
     this.activeWorkflows.clear();
+    this.integrationStats = {
+      totalExecutions: 0,
+      successfulExecutions: 0,
+      tokenSavings: 0,
+      parallelExecutions: 0
+    };
+    console.log('🔄 Command Integrator reset completed');
   }
 }
 

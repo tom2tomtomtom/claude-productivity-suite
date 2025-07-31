@@ -2,7 +2,7 @@
  * Test the new .md XML Command Integration system
  */
 
-const { ClaudeProductivitySuite } = require('./src/index');
+const { ClaudeProductivitySuite } = require('../../src/index');
 
 async function testIntegration() {
   console.log('🧪 Testing .md XML Command Integration\n');

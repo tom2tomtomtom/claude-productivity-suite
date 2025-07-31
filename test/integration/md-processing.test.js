@@ -2,10 +2,10 @@
  * Test .md XML command file processing
  */
 
-const { MarkdownProcessor } = require('./src/core/markdown-processor');
-const { XMLMetadataParser } = require('./src/core/xml-metadata-parser');
-const { CommandIntegrator } = require('./src/core/command-integrator');
-const { WorkflowExecutor } = require('./src/core/workflow-executor');
+const { MarkdownProcessor } = require('../../src/core/markdown-processor');
+const { XMLMetadataParser } = require('../../src/core/xml-metadata-parser');
+const { CommandIntegrator } = require('../../src/core/command-integrator');
+const { WorkflowExecutor } = require('../../src/core/workflow-executor');
 
 async function testMdProcessing() {
   console.log('🧪 Testing .md XML Command File Processing\n');

@@ -128,7 +128,7 @@ class SessionManager {
    * Clean up expired sessions
    */
   startCleanup() {
-    setInterval(() => {
+    this.cleanupTimer = setInterval(() => {
       const now = Date.now();
       const expiredSessions = [];
 
