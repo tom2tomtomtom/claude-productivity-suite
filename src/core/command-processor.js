@@ -22,6 +22,23 @@ class CommandProcessor {
     this.commandMap = this.initializeCommandMap();
   }
 
+  /**
+   * Initialize the command processor and all subsystems
+   */
+  async initialize() {
+    console.log('Initializing Command Processor...');
+    
+    // Initialize all subsystems
+    await this.router.initialize?.();
+    await this.agents.performHealthCheck?.();
+    await this.context.reset?.();
+    await this.progress.reset?.();
+    await this.budget.reset?.();
+    await this.errorHandler.reset?.();
+    
+    console.log('✓ Command Processor initialized successfully');
+  }
+
   initializeCommandMap() {
     const { BuildAppCommand } = require('./commands/build-app-command');
     const { FixBrokenCommand } = require('./commands/fix-broken-command');

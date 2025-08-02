@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Smart Task Manager - Your Intelligent Daily Planner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .insights-bar {
+            background: #f8f9ff;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e1e5f3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .insight-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #4c51bf;
+        }
+
+        .insight-item .number {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            border-bottom: 1px solid #e1e5f3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .task-input-container {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .task-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e1e5f3;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .task-input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #f7fafc;
+            color: #4a5568;
+            border: 2px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            background: #edf2f7;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-select {
+            padding: 8px 16px;
+            border: 2px solid #e1e5f3;
+            border-radius: 20px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .main-content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .task-list-section h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .task-item {
+            background: white;
+            border: 2px solid #e1e5f3;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: move;
+            position: relative;
+        }
+
+        .task-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .task-item.completed {
+            opacity: 0.6;
+            background: #f7fafc;
+        }
+
+        .task-item.completed .task-title {
+            text-decoration: line-through;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .task-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .task-description {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .task-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .task-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .priority-badge {
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .priority-high { background: #e53e3e; }
+        .priority-medium { background: #dd6b20; }
+        .priority-low { background: #38a169; }
+
+        .task-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .task-item:hover .task-actions {
+            opacity: 1;
+        }
+
+        .task-action-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-complete {
+            background: #48bb78;
+            color: white;
+        }
+
+        .btn-delete {
+            background: #e53e3e;
+            color: white;
+        }
+
+        .sidebar {
+            background: #f8f9ff;
+            border-radius: 15px;
+            padding: 25px;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .recommendations-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .recommendation-item {
+            background: white;
+            border: 1px solid #e1e5f3;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+
+        .recommendation-title {
+            font-weight: 600;
+            color: #4c51bf;
+            margin-bottom: 5px;
+        }
+
+        .recommendation-time {
+            color: #718096;
+            font-size: 0.8rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #718096;
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e1e5f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .task-form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e5f3;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            border-color: #667eea;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .task-input-container {
+                max-width: none;
+            }
+
+            .insights-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎯 Smart Task Manager</h1>
+            <p>Your AI-powered daily productivity companion</p>
+        </header>
+
+        <!-- Insights Bar -->
+        <div class="insights-bar">
+            <div class="insight-item">
+                <span>📋 Total Tasks:</span>
+                <span class="number" id="total-tasks">0</span>
+            </div>
+            <div class="insight-item">
+                <span>✅ Completed:</span>
+                <span class="number" id="completed-tasks">0</span>
+            </div>
+            <div class="insight-item">
+                <span>🔥 Priority Score:</span>
+                <span class="number" id="avg-priority">0</span>
+            </div>
+            <div class="insight-item">
+                <span>⚠️ Overdue:</span>
+                <span class="number" id="overdue-tasks">0</span>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="task-input-container">
+                <input type="text" id="quick-task-input" class="task-input" 
+                       placeholder="✨ What needs to be done? (e.g., 'Call dentist for appointment')" 
+                       maxlength="200">
+                <button class="btn btn-primary" onclick="addQuickTask()">
+                    ➕ Add Task
+                </button>
+            </div>
+            
+            <div class="filters">
+                <select class="filter-select" id="category-filter" onchange="filterTasks()">
+                    <option value="all">All Categories</option>
+                    <option value="work">💼 Work</option>
+                    <option value="personal">🏠 Personal</option>
+                    <option value="health">💪 Health</option>
+                    <option value="learning">📚 Learning</option>
+                    <option value="finance">💰 Finance</option>
+                    <option value="general">📝 General</option>
+                </select>
+                
+                <select class="filter-select" id="sort-filter" onchange="filterTasks()">
+                    <option value="priority">🎯 By Priority</option>
+                    <option value="deadline">📅 By Deadline</option>
+                    <option value="created">🕒 By Created</option>
+                </select>
+                
+                <button class="btn btn-secondary" onclick="showTaskForm()">
+                    ⚙️ Advanced Add
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Task List -->
+            <div class="task-list-section">
+                <h2>📝 Your Tasks</h2>
+                <div id="task-list" class="task-list">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>💡 Smart Recommendations</h3>
+                <div id="recommendations" class="recommendations-list">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h3>📊 Quick Stats</h3>
+                    <div id="quick-stats" style="font-size: 0.9rem; color: #718096;">
+                        Loading insights...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Form Modal -->
+    <div id="task-form-modal" class="task-form-modal" style="display: none;">
+        <div class="modal-content">
+            <h3 style="margin-bottom: 25px; color: #2d3748;">➕ Add New Task</h3>
+            
+            <form id="task-form" onsubmit="submitTaskForm(event)">
+                <div class="form-group">
+                    <label class="form-label">Task Title *</label>
+                    <input type="text" name="title" class="form-input" 
+                           placeholder="What needs to be done?" required maxlength="200">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea name="description" class="form-input" rows="3" 
+                              placeholder="Additional details (optional)" maxlength="500"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select name="category" class="form-input">
+                            <option value="general">📝 General</option>
+                            <option value="work">💼 Work</option>
+                            <option value="personal">🏠 Personal</option>
+                            <option value="health">💪 Health</option>
+                            <option value="learning">📚 Learning</option>
+                            <option value="finance">💰 Finance</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Importance (1-5)</label>
+                        <select name="importance" class="form-input">
+                            <option value="1">1 - Low</option>
+                            <option value="2">2 - Minor</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - High</option>
+                            <option value="5">5 - Critical</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Complexity (1-5)</label>
+                        <select name="complexity" class="form-input">
+                            <option value="1">1 - Very Easy</option>
+                            <option value="2">2 - Easy</option>
+                            <option value="3" selected>3 - Medium</option>
+                            <option value="4">4 - Hard</option>
+                            <option value="5">5 - Very Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Estimated Time (mins)</label>
+                        <input type="number" name="estimatedMinutes" class="form-input" 
+                               min="5" max="480" value="30" step="5">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Deadline (optional)</label>
+                    <input type="datetime-local" name="deadline" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Tags (comma-separated)</label>
+                    <input type="text" name="tags" class="form-input" 
+                           placeholder="urgent, meeting, creative">
+                </div>
+
+                <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 25px;">
+                    <button type="button" class="btn btn-secondary" onclick="hideTaskForm()">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        ✨ Create Task
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let tasks = [];
+        let currentFilter = { category: 'all', sort: 'priority' };
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTasks();
+            loadRecommendations();
+            
+            // Quick task input enter key
+            document.getElementById('quick-task-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    addQuickTask();
+                }
+            });
+        });
+
+        // API functions
+        async function apiCall(endpoint, method = 'GET', data = null) {
+            const config = {
+                method,
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            };
+            
+            if (data) {
+                config.body = JSON.stringify(data);
+            }
+
+            try {
+                const response = await fetch(`/api/tasks${endpoint}`, config);
+                return await response.json();
+            } catch (error) {
+                console.error('API call failed:', error);
+                return { success: false, error: error.message };
+            }
+        }
+
+        // Load and display tasks
+        async function loadTasks() {
+            const queryParams = new URLSearchParams({
+                sort: currentFilter.sort,
+                category: currentFilter.category
+            });
+
+            const response = await apiCall(`?${queryParams}`);
+            
+            if (response.success) {
+                tasks = response.data;
+                displayTasks(tasks);
+                updateInsights(response.meta.insights);
+            } else {
+                showError('Failed to load tasks');
+            }
+        }
+
+        // Display tasks in the UI
+        function displayTasks(tasksToShow) {
+            const taskList = document.getElementById('task-list');
+            
+            if (tasksToShow.length === 0) {
+                taskList.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🎯</div>
+                        <h3>No tasks yet!</h3>
+                        <p>Add your first task to get started with smart prioritization.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            taskList.innerHTML = tasksToShow.map(task => `
+                <div class="task-item ${task.completed ? 'completed' : ''}" data-id="${task.id}">
+                    <div class="task-actions">
+                        ${!task.completed ? `<button class="task-action-btn btn-complete" onclick="completeTask(${task.id})" title="Mark Complete">✓</button>` : ''}
+                        <button class="task-action-btn btn-delete" onclick="deleteTask(${task.id})" title="Delete">×</button>
+                    </div>
+                    
+                    <div class="task-header">
+                        <div>
+                            <div class="task-title">${escapeHtml(task.title)}</div>
+                            ${task.description ? `<div class="task-description">${escapeHtml(task.description)}</div>` : ''}
+                        </div>
+                        <div class="priority-badge priority-${getPriorityLevel(task.priority)}">
+                            Priority: ${task.priority}
+                        </div>
+                    </div>
+                    
+                    <div class="task-meta">
+                        <div class="task-tags">
+                            <span class="tag">${getCategoryIcon(task.category)} ${task.category}</span>
+                            ${task.deadline ? `<span class="tag">📅 ${formatDate(task.deadline)}</span>` : ''}
+                            ${task.estimatedMinutes ? `<span class="tag">⏱️ ${task.estimatedMinutes}min</span>` : ''}
+                            ${task.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Load smart recommendations
+        async function loadRecommendations() {
+            const response = await apiCall('/recommendations?time=60');
+            
+            if (response.success) {
+                displayRecommendations(response.data);
+            }
+        }
+
+        // Display recommendations
+        function displayRecommendations(recommendations) {
+            const container = document.getElementById('recommendations');
+            
+            if (recommendations.length === 0) {
+                container.innerHTML = `
+                    <div class="recommendation-item">
+                        <div class="recommendation-title">🎉 All caught up!</div>
+                        <div>No urgent tasks right now. Great job!</div>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = recommendations.map(task => `
+                <div class="recommendation-item">
+                    <div class="recommendation-title">${escapeHtml(task.title)}</div>
+                    <div class="recommendation-time">⏱️ ${task.estimatedMinutes} min • Priority: ${task.priority}</div>
+                </div>
+            `).join('');
+        }
+
+        // Add quick task
+        async function addQuickTask() {
+            const input = document.getElementById('quick-task-input');
+            const title = input.value.trim();
+            
+            if (!title) return;
+
+            const response = await apiCall('', 'POST', { title });
+            
+            if (response.success) {
+                input.value = '';
+                loadTasks();
+                loadRecommendations();
+                showSuccess('Task added successfully! 🎉');
+            } else {
+                showError('Failed to add task');
+            }
+        }
+
+        // Complete task
+        async function completeTask(taskId) {
+            const response = await apiCall(`/${taskId}/complete`, 'PATCH');
+            
+            if (response.success) {
+                loadTasks();
+                loadRecommendations();
+                showSuccess(response.message);
+            } else {
+                showError('Failed to complete task');
+            }
+        }
+
+        // Delete task
+        async function deleteTask(taskId) {
+            if (!confirm('Are you sure you want to delete this task?')) return;
+
+            const response = await apiCall(`/${taskId}`, 'DELETE');
+            
+            if (response.success) {
+                loadTasks();
+                loadRecommendations();
+                showSuccess('Task deleted successfully');
+            } else {
+                showError('Failed to delete task');
+            }
+        }
+
+        // Filter tasks
+        function filterTasks() {
+            currentFilter.category = document.getElementById('category-filter').value;
+            currentFilter.sort = document.getElementById('sort-filter').value;
+            loadTasks();
+        }
+
+        // Show/hide task form modal
+        function showTaskForm() {
+            document.getElementById('task-form-modal').style.display = 'flex';
+        }
+
+        function hideTaskForm() {
+            document.getElementById('task-form-modal').style.display = 'none';
+            document.getElementById('task-form').reset();
+        }
+
+        // Submit advanced task form
+        async function submitTaskForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const taskData = {
+                title: formData.get('title'),
+                description: formData.get('description'),
+                category: formData.get('category'),
+                importance: parseInt(formData.get('importance')),
+                complexity: parseInt(formData.get('complexity')),
+                estimatedMinutes: parseInt(formData.get('estimatedMinutes')),
+                deadline: formData.get('deadline') || null,
+                tags: formData.get('tags') ? formData.get('tags').split(',').map(t => t.trim()) : []
+            };
+
+            const response = await apiCall('', 'POST', taskData);
+            
+            if (response.success) {
+                hideTaskForm();
+                loadTasks();
+                loadRecommendations();
+                showSuccess('Task created successfully! ✨');
+            } else {
+                showError('Failed to create task');
+            }
+        }
+
+        // Update insights display
+        function updateInsights(insights) {
+            document.getElementById('total-tasks').textContent = insights.totalTasks;
+            document.getElementById('completed-tasks').textContent = insights.completedTasks;
+            document.getElementById('avg-priority').textContent = insights.averagePriority;
+            document.getElementById('overdue-tasks').textContent = insights.overdueTasks;
+
+            // Update quick stats
+            const quickStats = document.getElementById('quick-stats');
+            quickStats.innerHTML = `
+                <div style="margin-bottom: 10px;">
+                    📈 Completion Rate: <strong>${insights.completionRate}%</strong>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    📅 Due Today: <strong>${insights.tasksDueToday}</strong>
+                </div>
+                ${insights.overdueTasks > 0 ? `
+                    <div style="color: #e53e3e; font-weight: 600;">
+                        ⚠️ ${insights.overdueTasks} overdue task${insights.overdueTasks > 1 ? 's' : ''}
+                    </div>
+                ` : ''}
+            `;
+        }
+
+        // Utility functions
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        function getPriorityLevel(priority) {
+            if (priority >= 80) return 'high';
+            if (priority >= 50) return 'medium';
+            return 'low';
+        }
+
+        function getCategoryIcon(category) {
+            const icons = {
+                work: '💼',
+                personal: '🏠',
+                health: '💪',
+                learning: '📚',
+                finance: '💰',
+                general: '📝'
+            };
+            return icons[category] || '📝';
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffTime = date - now;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays < 0) return '⚠️ Overdue';
+            if (diffDays === 0) return '📅 Today';
+            if (diffDays === 1) return '📅 Tomorrow';
+            return `📅 ${diffDays} days`;
+        }
+
+        function showSuccess(message) {
+            // Simple success notification - could be enhanced with a proper toast system
+            alert(message);
+        }
+
+        function showError(message) {
+            // Simple error notification - could be enhanced with a proper toast system
+            alert('Error: ' + message);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('task-form-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideTaskForm();
+            }
+        });
+    </script>
+</body>
+</html>
